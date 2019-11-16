@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+
+{% block header %}
+<h1>{% block title %}あなたの選択{% endblock %}</h1>
+{% endblock %} 
+
+{% block content %}
+<form method="post">
+  <input type="radio" name="hand" value="グー" checked/> グー
+  <input type="radio" name="hand" value="チョキ" /> チョキ
+  <input type="radio" name="hand" value="パー"/> パー
+  <input type="submit" value="決定">
+</form>
+{% endblock %}
