@@ -1,11 +1,11 @@
 {% extends 'base.html' %} 
 
-{% block header %}
-<h1>{% block title %}結果{% endblock %}</h1>
+{% block h2 %}
+{% block title %}<strong>結果:</strong>{% endblock %}
 {% endblock %} 
 
 {% block content %}
-{{ janken_result }}
+<strong>{{ janken_result }}</strong>
 <p>あなた: {{ client_hand }}</p>
 <p>わたし: {{ pc_hand }}</p>
 

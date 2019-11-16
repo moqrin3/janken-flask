@@ -1,14 +1,22 @@
 {% extends 'base.html' %} 
-
-{% block header %}
-<h1>{% block title %}あなたの選択{% endblock %}</h1>
-{% endblock %} 
-
-{% block content %}
+{% block h2%} {% block title %}<strong>あなたの選択:</strong>{% endblock%} 
+{% endblock %} {% block content %}
 <form method="post">
-  <input type="radio" name="hand" value="グー" checked/> グー
-  <input type="radio" name="hand" value="チョキ" /> チョキ
-  <input type="radio" name="hand" value="パー"/> パー
-  <input type="submit" value="決定">
+<div class="field">
+      <div class="field">
+        <div class="control">
+            <label class="radio">
+            <input type="radio" name="hand" value="グー" checked /> グー</label>
+            <label class="radio"><input type="radio" name="hand" value="チョキ" /> チョキ</label>
+            <label class="radio"><input type="radio" name="hand" value="パー" /> パー</label>
+        </div>
+      </div>
+      
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">決定</button>
+        </div>
+        </div>
+</div>
 </form>
 {% endblock %}
